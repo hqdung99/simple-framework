@@ -6,7 +6,7 @@ const { instanceDB } = require("../lib/db");
 /* GET Login */
 router.get("/", function (req, res, next) {
   if (req.session.loggedIn) {
-    res.redirect("/books");
+    res.redirect("/tablelist");
   }
 
   res.render("login", {});
@@ -23,7 +23,7 @@ router.post("/auth", function (req, res, next) {
       console.log("connection success");
       req.session.loggedIn = true;
       req.session.username = username;
-      res.redirect("/books");
+      res.redirect("/tablelist");
     }
   });
 });
