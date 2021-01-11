@@ -51,13 +51,13 @@
               <td>
                 <a
                   class="btn btn-success edit"
-                  href="../table/edit/?table_name=<%=table_name%>&id=<%=data[i][data_properties[0]]%>"
+                  href="../table/edit/?table_name=<%=table_name%>&id=<%=data[i][primary_key]%>"
                   >Edit</a
                 >
                 <a
                   class="btn btn-danger delete"
                   onclick="return alert('Are You sure?')"
-                  href="../table/delete/?table_name=<%=table_name%>&id=<%=data[i][data_properties[0]]%>"
+                  href="../table/delete/?table_name=<%=table_name%>&id=<%=data[i][primary_key]%>"
                   >Delete</a
                 >
               </td>

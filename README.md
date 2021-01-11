@@ -1,22 +1,18 @@
 1. Set up database
    Download Mysql and paste that code to run
 
+CREATE TABLE `accounts` (
+`username` varchar(45) NOT NULL,
+`password` varchar(45) DEFAULT NULL,
+PRIMARY KEY (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `books` (
-
 `id` int(11) NOT NULL,
-
-`name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-
-`author` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-
-`created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-`updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-ALTER TABLE `books` ADD PRIMARY KEY (`id`);
-ALTER TABLE `books` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+`name` varchar(45) DEFAULT NULL,
+`author` varchar(45) DEFAULT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 2. Run project
 
