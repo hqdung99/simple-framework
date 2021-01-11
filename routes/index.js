@@ -1,7 +1,8 @@
 const express = require("express");
 const { connect } = require("../app");
 const router = express.Router();
-const { LoginForm, FormRegister } = require("../lib/tableForm");
+const { LoginForm } = require("../lib/loginForm");
+const { FormRegister } = require("../lib/registerForm");
 
 const loginForm = new LoginForm();
 const formRegister = new FormRegister();
