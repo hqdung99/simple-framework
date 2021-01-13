@@ -1,18 +1,25 @@
-class Handler {
+class HandlerInterface {
     constructor() {}
     setSuccessor (successor) {}
     HandleRequest(request, response, next) {}
 }
 
-class SessionLogin extends Handler {
+class Handler extends HandlerInterface {
     constructor() {
-        super()
-        console.log('SessionLogin created');
+        super();
         this.successor = null;
     }
-
+    
     setSuccessor (successor) {
         this.successor = successor
+    }
+
+    HandleRequest(request, response, next) {}
+}
+
+class SessionLogin extends Handler {
+    constructor() {
+        super();
     }
 
     HandleRequest(request, response, next) {

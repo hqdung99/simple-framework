@@ -10,7 +10,6 @@ sessionLogin.setSuccessor(tablelistForm);
 
 // display table list
 router.get("/", function (req, res, next) {
-  console.log("get tableList");
   sessionLogin.HandleRequest(req, res, next);
 });
 
