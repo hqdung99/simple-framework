@@ -1,16 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { instanceDB } = require("../lib/db");
-const { TablelistForm } = require("../lib/tablelistForm");
-const CoR = require("./CoR/handler");
+const TableListForm = require("../lib/manager/TableListForm");
+const config = require("../constants");
 
-var sessionLogin = new CoR.SessionLogin();
-var tablelistForm = new TablelistForm();
-sessionLogin.setSuccessor(tablelistForm);
+var tableListForm = new TableListForm();
 
 // display table list
 router.get("/", function (req, res, next) {
-  sessionLogin.HandleRequest(req, res, next);
+  tableListForm.doHandler(req, res, next, config.tableList.tableListShowing);
 });
 
 module.exports = router;
