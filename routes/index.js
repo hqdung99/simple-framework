@@ -12,8 +12,9 @@ router.get("/", function (req, res, next) {
   if (req.session.loggedIn) {
     res.redirect("/tablelist");
   }
-
-  res.render("login", {});
+  else {
+    res.render("login", {});
+  }
 });
 
 router.get("/login", function (req, res, next) {
