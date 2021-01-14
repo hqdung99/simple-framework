@@ -3,7 +3,6 @@ const router = express.Router();
 const LoginForm = require("../lib/manager/LoginForm");
 const FormRegister = require("../lib/manager/RegisterForm");
 const config = require("../constants");
-const RegisterForm = require("../lib/manager/RegisterForm");
 
 const loginForm = new LoginForm();
 const formRegister = new FormRegister;
