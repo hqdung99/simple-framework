@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const LoginForm = require("../lib/manager/LoginForm");
+const LogoutForm = require("../lib/manager/LoginForm");
 const FormRegister = require("../lib/manager/RegisterForm");
 
 const constants = require("../constants");
@@ -15,7 +16,7 @@ const setterInjection = SetterInjection.getInstance();
 const loginForm = new LoginForm();
 setterInjection.setHandlers(loginForm, nameMgr.loginForm);
 
-const formRegister = new FormRegister;
+const formRegister = new FormRegister();
 setterInjection.setHandlers(formRegister, nameMgr.registerForm);
 
 // Setter Injection : end ----------------------------------------
@@ -26,6 +27,12 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/login", function (req, res, next) {
+  res.render("login", {});
+});
+
+router.get("/logout", function (req, res, next) {
+  req.session.loggedIn = false;
+  req.session.username = "";
   res.render("login", {});
 });
 
