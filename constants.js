@@ -15,7 +15,9 @@ const Handlers = {
     addRowPosting : "addRowPosting",
     editRowGetting: "editRowGetting",
     editRowPosting: "editRowPosting",
-    deleteRowGetting: "deleteRowGetting"
+    deleteRowGetting: "deleteRowGetting",
+
+    ahihi: "ahihi"
 }
 
 const NameMgr = {

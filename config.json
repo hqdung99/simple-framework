@@ -45,7 +45,7 @@
         "tableListForm" : [
             {
                 "idHandler" : "tableListShowing",
-                "reverseChain" : ["tableListShowing", "sessionLogin"]
+                "reverseChain" : ["tableListShowing", "ahihi", "sessionLogin"]
             }
         ]
     }
