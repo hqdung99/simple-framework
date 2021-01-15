@@ -6,24 +6,25 @@ const DB = {
 }
 
 const LoginHandlers = {
-    login : 0
+    login : 000,
+    sessionLogin: 001,
 }
 
 const RegisterHandlers = {
-    register : 0
+    register : 100
 }
 
 const TableListHandlers = { 
-    tableListShowing : 0
+    tableListShowing : 200
 }
 
 const TableHandlers = {
-    rowGetting    : 0,
-    addRowGetting : 1,
-    addRowPosting : 2,
-    editRowGetting: 3,
-    editRowPosting: 4,
-    deleteRowGetting: 5
+    rowGetting    : 300,
+    addRowGetting : 301,
+    addRowPosting : 302,
+    editRowGetting: 303,
+    editRowPosting: 304,
+    deleteRowGetting: 305
 }
 
 module.exports = {

@@ -1,0 +1,11 @@
+{
+    "version" : 1,
+    "chainOfResponsiblity" : {
+        "tableList" : [
+            {
+                "index" : 0,
+                "chain" : []
+            }
+        ]
+    }
+}
