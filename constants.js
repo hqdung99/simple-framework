@@ -18,7 +18,16 @@ const Handlers = {
     deleteRowGetting: "deleteRowGetting"
 }
 
+const NameMgr = {
+    loginForm : "loginForm",
+    registerForm : "registerForm",
+    tableForm : "tableForm",
+    tableListForm: "tableListForm"
+}
+
 module.exports = {
     DB : DB, 
-    Handlers: Handlers
+    Handlers: Handlers,
+    pathToJson: "./config.json",
+    nameMgr : NameMgr
 };

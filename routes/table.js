@@ -1,10 +1,21 @@
 var express = require("express");
 var router = express.Router();
 const TableForm = require("../lib/manager/TableForm");
+
 const constants = require("../constants");
 const config = constants.Handlers;
+const nameMgr = constants.nameMgr;
+
+const SetterInjection = require("../lib/IoC/SetterInjection");
+const setterInjection = SetterInjection.getInstance();
+
+
+// Setter Injection : begin ----------------------------------------
 
 const tableForm = new TableForm();
+setterInjection.setHandlers(tableForm, nameMgr.tableForm);
+
+// Setter Injection : end ----------------------------------------
 
 // display table page
 router.get("/", function (req, res, next) {

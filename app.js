@@ -17,7 +17,10 @@ const tableListRouter = require("./routes/tablelist");
 const app = express();
 
 const { instanceDB } = require("./lib/db");
+const SetterInjection = require("./lib/IoC/SetterInjection");
+
 instanceDB.setConnection();
+SetterInjection.getInstance();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

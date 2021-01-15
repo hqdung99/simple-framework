@@ -5,9 +5,20 @@ const FormRegister = require("../lib/manager/RegisterForm");
 
 const constants = require("../constants");
 const config = constants.Handlers;
+const nameMgr = constants.nameMgr;
+
+const SetterInjection = require("../lib/IoC/SetterInjection");
+const setterInjection = SetterInjection.getInstance();
+
+// Setter Injection : begin ----------------------------------------
 
 const loginForm = new LoginForm();
+setterInjection.setHandlers(loginForm, nameMgr.loginForm);
+
 const formRegister = new FormRegister;
+setterInjection.setHandlers(formRegister, nameMgr.registerForm);
+
+// Setter Injection : end ----------------------------------------
 
 /* GET Login */
 router.get("/", function (req, res, next) {
