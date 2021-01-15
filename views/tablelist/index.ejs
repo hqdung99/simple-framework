@@ -6,8 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <style>
-    .previous {
+    .icon {
+      background-color: blue;
+      border: none;
+      color: white;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-bottom: 20px ;
+    }
+
+    .btnhistory {
       text-decoration: none;
       display: inline-block;
       padding: 8px 16px;
@@ -17,9 +30,18 @@
   </style>
 </head>
 
-<body class="container" style="margin-top: 50px">
+<body class="container" style="margin-top: 20px">
   <div>
-    <a href="#" class="previous" type="button" onclick="history.back(-1)">&#8249; Previous</a>
+    <a href="/tablelist">
+      <div class="icon"><i class="fas fa-home"></i>&nbsp; Home</div>
+    </a>
+    <a href="/login">
+      <div class="icon" style="float: right; background-color:#A59B98;"> Logout &nbsp;<i class="fas fa-sign-out-alt"></i></div>
+    </a>
+  </div>
+  <div>
+    <a href="#" class="btnhistory previous" type="button" onclick="history.back(-1)">&#8249; Previous</a>
+    
   </div>
   <table class="table">
     <thead>
@@ -44,6 +66,10 @@
         <% } %>
     </tbody>
   </table>
+  <div>
+  <a href="#" class="btnhistory forward" type="button" onclick="history.forward(1)" style="float: right;">Forward
+    &#8250;</a>
+  </div>
 </body>
 
 </html>
