@@ -5,32 +5,20 @@ const DB = {
     database: "sql12386459",
 }
 
-const LoginHandlers = {
-    login : 000,
-    sessionLogin: 001,
-}
-
-const RegisterHandlers = {
-    register : 100
-}
-
-const TableListHandlers = { 
-    tableListShowing : 200
-}
-
-const TableHandlers = {
-    rowGetting    : 300,
-    addRowGetting : 301,
-    addRowPosting : 302,
-    editRowGetting: 303,
-    editRowPosting: 304,
-    deleteRowGetting: 305
+const Handlers = {
+    login : "login",
+    sessionLogin: "sessionLogin",
+    register : "register",
+    tableListShowing : "tableListShowing",
+    rowGetting    : "rowGetting",
+    addRowGetting : "addRowGetting",
+    addRowPosting : "addRowPosting",
+    editRowGetting: "editRowGetting",
+    editRowPosting: "editRowPosting",
+    deleteRowGetting: "deleteRowGetting"
 }
 
 module.exports = {
     DB : DB, 
-    login: LoginHandlers, 
-    register: RegisterHandlers, 
-    tableList: TableListHandlers, 
-    table: TableHandlers
+    Handlers: Handlers
 };

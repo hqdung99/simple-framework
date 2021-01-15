@@ -1,10 +1,51 @@
 {
     "version" : 1,
-    "chainOfResponsiblity" : {
-        "tableList" : [
+    "chainOfHandler" : {
+        "loginForm": [
             {
-                "index" : 0,
-                "chain" : []
+                "idHandler" : "login",
+                "reverseChain" : ["login"]
+            }
+        ],
+        
+        "registerForm" : [
+            {
+                "idHandler" : "register",
+                "reverseChain" : ["register"]
+            }
+        ],
+        
+        "tableForm" : [
+            {
+                "idHandler" : "rowGetting",
+                "reverseChain" : ["rowGetting", "sessionLogin"]
+            },
+            {
+                "idHandler" : "addRowGetting",
+                "reverseChain" : ["addRowGetting", "sessionLogin"]
+            },
+            {
+                "idHandler" : "addRowPosting",
+                "reverseChain" : ["addRowPosting", "sessionLogin"]
+            },
+            {
+                "idHandler" : "editRowGetting",
+                "reverseChain" : ["editRowGetting", "sessionLogin"]
+            },
+            {
+                "idHandler" : "editRowPosting",
+                "reverseChain" : ["editRowPosting", "sessionLogin"]
+            },
+            {
+                "idHandler" : "deleteRowGetting",
+                "reverseChain" : ["deleteRowGetting", "sessionLogin"]
+            }
+        ],
+
+        "tableListForm" : [
+            {
+                "idHandler" : "tableListShowing",
+                "reverseChain" : ["tableListShowing", "sessionLogin"]
             }
         ]
     }
